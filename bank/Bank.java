@@ -79,7 +79,7 @@ public class Bank {
             s.executeUpdate(
                     "DROP TABLE " + "accounts" );
         } catch (Exception e) {
-            System.out.println("La table à été effacé" + e);
+            System.out.println("The table has been cleared." + e);
         }
     }
 
