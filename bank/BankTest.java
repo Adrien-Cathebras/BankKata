@@ -1,3 +1,16 @@
+/*
+Please, can you read this paragraph:
+
+I had to make some changes.
+When you ask for the Check in DB,
+for the threshold I had to put 0
+for what was initially false
+and 1 for what was initially True.
+
+I went through Mysql, that's why I had to do this.
+*/
+
+
 package bank;
 
 import org.junit.After;
@@ -43,8 +56,8 @@ public class BankTest {
 
         // Check in DB
         assertEquals(
-                "[TESTY, 100, -100, f]" +
-                        "[TESTYTEST, 200, -300, f]",
+                "[TESTY, 100, -100, 0]" +
+                        "[TESTYTEST, 200, -300, 0]",
                 b.getTableDump());
     }
 
@@ -79,7 +92,7 @@ public class BankTest {
 
         // Check in DB
         assertEquals(
-                "[TESTY, 200, -100, f]",
+                "[TESTY, 200, -100, 0]",
                 b.getTableDump());
     }
 
@@ -97,7 +110,7 @@ public class BankTest {
 
         // Check in DB
         assertEquals(
-                "[TESTY, 90, -100, f]",
+                "[TESTY, 90, -100, 0]",
                 b.getTableDump());
     }
 
@@ -114,7 +127,7 @@ public class BankTest {
 
         // Check in DB
         assertEquals(
-                "[TESTY, 100, -100, t]",
+                "[TESTY, 100, -100, 1]",
                 b.getTableDump());
     }
 
@@ -134,7 +147,7 @@ public class BankTest {
 
         // Check in DB
         assertEquals(
-                "[TESTY, 100, -100, t]",
+                "[TESTY, 100, -100, 1]",
                 b.getTableDump());
     }
 
@@ -152,7 +165,7 @@ public class BankTest {
 
         // Check in DB
         assertEquals(
-                "[TESTY, 100, -100, f]",
+                "[TESTY, 100, -100, 0]",
                 b.getTableDump());
     }
 
@@ -176,8 +189,8 @@ public class BankTest {
 
         // Check in DB
         assertEquals(
-                "[TESTY, 90, -100, t]" +
-                        "[TESTO, 320, -200, f]",
+                "[TESTY, 90, -100, 1]" +
+                        "[TESTO, 320, -200, 0]",
                 b.getTableDump());
     }
 }

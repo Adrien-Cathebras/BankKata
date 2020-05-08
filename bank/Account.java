@@ -1,18 +1,72 @@
 package bank;
 
-class Account {
+class Account
+{
+    // Attributes to need in this Kata
+    private String name;
+    private int balance;
+    private int threshold;
+    private boolean isBlocked;
 
-    // Attributes
-    // TODO
+    // Constructor of our attributes
+    public Account(String name, int balance, int threshold, boolean isBlocked)
+    {
+        this.name=name;
+        this.balance=balance;
+        this.threshold=threshold;
+        this.isBlocked=isBlocked;
+    }
 
-    // Constructor
-    // TODO
+    // Methods of our constructor
+    public String getName()
+    {
+        return name;
+    }
 
-    // Methods
-    // TODO
+    public int getBalance()
+    {
+        return balance;
+    }
 
-    public String toString() {
-        // TODO
-        return "";
+    public int getThreshold()
+    {
+        return threshold;
+    }
+
+    public boolean getIsBlocked()
+    {
+        return isBlocked;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setBalance(int balance)
+    {
+        this.balance = balance;
+    }
+
+    public void setThreshold(int threshold)
+    {
+        this.threshold = threshold;
+    }
+
+    public void setIsBlocked(boolean isBlocked)
+    {
+        this.isBlocked = isBlocked;
+    }
+
+    public String toString()
+    {
+
+        String result = "";
+        result += this.name + " | ";
+        result += this.balance + " | ";
+        result += this.threshold + " | ";
+        result += this.isBlocked + "\n";
+
+        return result;
     }
 }
